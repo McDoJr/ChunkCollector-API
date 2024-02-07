@@ -1,14 +1,11 @@
 package dev.kbejj.chunkcollector.events;
 
-import org.bukkit.Location;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.event.Cancellable;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 import org.bukkit.inventory.ItemStack;
 import org.jetbrains.annotations.NotNull;
-
-import java.util.UUID;
 
 public class CollectorAutoSellEvent extends Event implements Cancellable {
 
@@ -17,13 +14,11 @@ public class CollectorAutoSellEvent extends Event implements Cancellable {
     private final ItemStack itemStack;
     private double sellPrice;
     private final OfflinePlayer offlinePlayer;
-    private final Location collectorLocation;
 
-    public CollectorAutoSellEvent(ItemStack itemStack, double sellPrice, OfflinePlayer offlinePlayer, Location collectorLocation) {
+    public CollectorAutoSellEvent(ItemStack itemStack, double sellPrice, OfflinePlayer offlinePlayer) {
         this.itemStack = itemStack;
         this.sellPrice = sellPrice;
         this.offlinePlayer = offlinePlayer;
-        this.collectorLocation = collectorLocation;
     }
 
     public void setSellPrice(double sellPrice) {
@@ -42,9 +37,6 @@ public class CollectorAutoSellEvent extends Event implements Cancellable {
         return offlinePlayer;
     }
 
-    public Location getCollectorLocation() {
-        return collectorLocation;
-    }
 
     @NotNull
     @Override

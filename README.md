@@ -2,7 +2,7 @@
 API for ChunkCollector Plugin
 
 Using the pom.xml in maven:
-```
+```xml
 <repositories>
     <repository>
         <id>jitpack.io</id>

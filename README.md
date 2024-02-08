@@ -19,7 +19,7 @@ Using the pom.xml in maven:
 ```
 
 Using the build.gradle in gradle:
-```
+```groovy
 allprojects {
     repositories {
         ...
